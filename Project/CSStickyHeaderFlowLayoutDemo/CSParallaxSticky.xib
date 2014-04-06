@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="1eT-rW-DvV">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="213"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="213"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="success-baby" translatesAutoresizingMaskIntoConstraints="NO" id="QwK-rZ-0wc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="213"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </imageView>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some text here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tf3-2V-bCu">
+                        <rect key="frame" x="73" y="156" width="174" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="174" id="798-3N-4HW"/>
+                            <constraint firstAttribute="height" constant="21" id="UoS-ib-0dc"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Tf3-2V-bCu" secondAttribute="bottom" constant="36" id="P38-e6-2gj"/>
+                <constraint firstItem="QwK-rZ-0wc" firstAttribute="leading" secondItem="1eT-rW-DvV" secondAttribute="leading" id="PaT-Gs-4tO"/>
+                <constraint firstItem="QwK-rZ-0wc" firstAttribute="top" secondItem="1eT-rW-DvV" secondAttribute="top" id="h5t-oD-Mwm"/>
+                <constraint firstItem="Tf3-2V-bCu" firstAttribute="centerX" secondItem="QwK-rZ-0wc" secondAttribute="centerX" id="iBj-A5-d7L"/>
+                <constraint firstAttribute="bottom" secondItem="QwK-rZ-0wc" secondAttribute="bottom" id="si8-4z-llN"/>
+                <constraint firstAttribute="trailing" secondItem="QwK-rZ-0wc" secondAttribute="trailing" id="wWf-Cp-s7b"/>
+            </constraints>
+            <size key="customSize" width="320" height="320"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="success-baby" width="640" height="425"/>
+    </resources>
+</document>

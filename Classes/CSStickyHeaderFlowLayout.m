@@ -87,15 +87,34 @@ NSString *const CSStickyHeaderParallaxHeader = @"CSStickyHeaderParallexHeader";
         CGFloat y = MIN(maxY - self.parallaxHeaderMinimumReferenceSize.height, bounds.origin.y + self.collectionView.contentInset.top);
         CGFloat height = MAX(1, -y + maxY);
 
-        currentAttribute.frame = (CGRect){
+        // if zIndex < 0 would prevents tap from recognized right under navigation bar
+        currentAttribute.zIndex = 0;
+		
+		// Check to see if value has been specified
+		if (self.parallaxHeaderStickHeight.height) {
+			
+			// Only run when the height of the parallax-frame is <= to our stick-height
+			if (height <= self.parallaxHeaderStickHeight.height) {
+				
+				// Make sure were on top of cells
+				currentAttribute.zIndex = 20000;
+				
+				// Set height to stick-height
+				height = self.parallaxHeaderStickHeight.height;
+				
+				// When scroll passes the y-axis value of original parallax height
+				if (self.collectionView.contentOffset.y >= self.parallaxHeaderReferenceSize.height) {
+					y = self.collectionView.contentOffset.y;
+				}
+			}
+		}
+		
+		currentAttribute.frame = (CGRect){
             frame.origin.x,
             y,
             frame.size.width,
             height,
         };
-
-        // if zIndex < 0 would prevents tap from recognized right under navigation bar
-        currentAttribute.zIndex = 0;
 
         [allItems addObject:currentAttribute];
     }
